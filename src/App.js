@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+// src/App.jsx
+import React, { useState } from 'react';
 import './App.css';
+import HeaderBar from './component/HeaderBar/HeaderBar';
+import IntroAnimation from './component/IntroAnimation/IntroAnimation';
+import { motion } from 'framer-motion';
 
-function App() {
+const App = () => {
+  const [introComplete, setIntroComplete] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {!introComplete && <IntroAnimation onComplete={() => setIntroComplete(true)} />}
+      {introComplete && (
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className='body'
         >
-          Learn React
-        </a>
-      </header>
+          <HeaderBar />
+          {/* Add other components of your site here */}
+        </motion.div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
