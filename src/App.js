@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import HeaderBar from './component/HeaderBar/HeaderBar';
+import MainPresentation from './component/MainPresentation/MainPresentation';
 import IntroAnimation from './component/IntroAnimation/IntroAnimation';
 import { motion } from 'framer-motion';
 
@@ -19,6 +20,7 @@ const App = () => {
           className='body'
         >
           <HeaderBar />
+          <MainPresentation />
           {/* Add other components of your site here */}
         </motion.div>
       )}
