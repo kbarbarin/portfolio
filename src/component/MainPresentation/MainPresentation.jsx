@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import './MainPresentation.css';
 
 const MainPresentation = () => {
-    const image = { hidden: { opacity: 0, width: "90%" }, visible: { opacity: 1, width: "100%" } };
+    const divSVG = {hidden: { opacity: 0 }, visible: { opacity: 1, transition: {when: "beforeChildren", staggerChildren: 0.2}}}
+    const imageGreen = { hidden: { opacity: 0, height: "0%", width: "0%", x: 10 }, visible: { opacity: 1, height: "100%", width: "100%", x: 0 } };
+    const imageRed = { hidden: { opacity: 0, width: "50%", y: 10 }, visible: { opacity: 1, width: "100%", y: 0 } };
+    const imagePurple = { hidden: { opacity: 0, width: "50%", y: -10 }, visible: { opacity: 1, width: "100%", y: 0 } };
+    const imageYellow = { hidden: { opacity: 0, width: "50%", x: -10 }, visible: { opacity: 1, width: "100%", x: 0 } };
     const pathGreen = "M 3.8 4 C 3.8 4 1.2 4.8 0.7 6 V 14.4 C 1 15.5 3 16 4 16.5 C 4 16.5 4.5 16.7 4.5 16.4 V 4 M 4.5 4 C 4.5 4 4.5 3.8 3.8 4";
     const pathRed = "M 6.55 3 L 6.55 8 C 6.55 8 6.5 8.4 6.8 8.6 L 8 9.8 C 8 9.8 8.5 10.1 8.8 9.7 L 13.7 3.4 C 13.7 3.4 14 3.1 13.7 2.8 L 10.4 1.1 C 10.4 1.1 10.1 1 9.8 1.1 M 9.8 1.1 L 7 2.4 C 7 2.4 6.7 2.5 6.55 3";
-    const pathViolet = "M 6.55 11.1 L 6.55 17.5 C 6.55 17.5 6.6 17.8 7 18 L 9.6 19.4 C 9.6 19.4 9.9 19.6 10.2 19.4 L 13 18 C 13 18 13.5 17.7 13 17.25 L 6.8 11 C 6.8 11 6.65 10.9 6.55 11.1";
+    const pathPurple = "M 6.55 11.1 L 6.55 17.5 C 6.55 17.5 6.6 17.8 7 18 L 9.6 19.4 C 9.6 19.4 9.9 19.6 10.2 19.4 L 13 18 C 13 18 13.5 17.7 13 17.25 L 6.8 11 C 6.8 11 6.65 10.9 6.55 11.1";
     const pathYellow = "M 15.8 4.1 L 10.3 11 C 10.3 11 10 11.5 10.6 12 L 15 16.4 C 15 16.4 15.5 16.7 16 16.4 L 19 14.8 C 19 14.8 19.3 14.5 19.3 14 L 19.2 6 C 19.2 6 19.2 5.8 19 5.5 L 16.2 4 C 16.2 4 16 3.9 15.8 4.1";
 
     return (
@@ -21,9 +25,9 @@ const MainPresentation = () => {
                 <motion.svg
                     initial="hidden"
                     animate="visible"
-                    variants={image}
                     width="500"
                     height="500"
+                    variants={divSVG}
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -32,32 +36,33 @@ const MainPresentation = () => {
                         d={pathGreen}
                         strokeWidth="1"
                         fill="#17C8AF"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
+                        variants={imageGreen}
+                        initial="hidden"
+                        animate="visible"
                         transition={{ duration: 2 }}
                     />
                     <motion.path
-                        d={pathViolet}
-                        strokeWidth="1"
+                        d={pathPurple}
                         fill="#6076A5"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
+                        variants={imagePurple}
+                        initial="hidden"
+                        animate="visible"
                         transition={{ duration: 2 }}
                     />
                     <motion.path
                         d={pathRed}
-                        strokeWidth="1"
                         fill="#FC6969"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
+                        variants={imageRed}
+                        initial="hidden"
+                        animate="visible"
                         transition={{ duration: 2 }}
                     />
                     <motion.path
                         d={pathYellow}
-                        strokeWidth="1"
                         fill="#FAC144"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
+                        variants={imageYellow}
+                        initial="hidden"
+                        animate="visible"
                         transition={{ duration: 2 }}
                     />
                 </motion.svg>

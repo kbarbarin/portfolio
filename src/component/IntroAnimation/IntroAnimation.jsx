@@ -9,8 +9,8 @@ const IntroAnimation = ({ onComplete }) => {
     <motion.div 
       className="intro-container"
       initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ delay: 6, duration: 1 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 8, duration: 0 }}
       onAnimationComplete={onComplete}
     >
       <motion.div 
@@ -20,7 +20,7 @@ const IntroAnimation = ({ onComplete }) => {
         transition={{ duration: 3 }}
       />
       <ReactTyped
-        strings={['Welcome to My Portfolio.', 'Discover My Projects.', 'I\'m Killian Barbarin.']}
+        strings={['Welcome to My Portfolio.', 'Discover My Projects.', 'I\'m Killian Barbarin.', '']}
         typeSpeed={40}
         backSpeed={20}
         className="typed-text"
