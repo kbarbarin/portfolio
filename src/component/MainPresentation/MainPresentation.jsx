@@ -39,7 +39,7 @@ const MainPresentation = () => {
                         variants={imageGreen}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 2 }}
+                        transition={{ delay: 2, duration: 2 }}
                     />
                     <motion.path
                         d={pathPurple}
@@ -47,7 +47,7 @@ const MainPresentation = () => {
                         variants={imagePurple}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 2 }}
+                        transition={{ delay: 2, duration: 2 }}
                     />
                     <motion.path
                         d={pathRed}
@@ -55,7 +55,7 @@ const MainPresentation = () => {
                         variants={imageRed}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 2 }}
+                        transition={{ delay: 2, duration: 2 }}
                     />
                     <motion.path
                         d={pathYellow}
@@ -63,7 +63,7 @@ const MainPresentation = () => {
                         variants={imageYellow}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 2 }}
+                        transition={{ delay: 2, duration: 2 }}
                     />
                 </motion.svg>
             </motion.div>
