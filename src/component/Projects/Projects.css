@@ -1,0 +1,74 @@
+/* ProjectSection.css */
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+.project-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.project-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.project-right {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.project-hologram {
+  position: absolute;
+  bottom: 120px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  z-index: 3;
+}
+
+.project-socle {
+  width: 150px;
+  height: 30px;
+  background: #333;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.projector-light {
+  position: absolute;
+  bottom: 30px;
+  width: 200px;
+  height: 400px;
+  background: rgba(0, 0, 193, 0.2);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  transform-origin: bottom;
+}

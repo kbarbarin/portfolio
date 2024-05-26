@@ -1,10 +1,13 @@
 // src/App.jsx
 import React, { useState } from 'react';
-import './App.css';
+import { motion } from 'framer-motion';
+
 import HeaderBar from './component/HeaderBar/HeaderBar';
 import MainPresentation from './component/MainPresentation/MainPresentation';
 import IntroAnimation from './component/IntroAnimation/IntroAnimation';
-import { motion } from 'framer-motion';
+import Projects from './component/Projects/Projects';
+
+import './App.css';
 
 const App = () => {
   const [introComplete, setIntroComplete] = useState(false);
@@ -21,6 +24,7 @@ const App = () => {
         >
           <HeaderBar />
           <MainPresentation />
+          <Projects />
           {/* Add other components of your site here */}
         </motion.div>
       )}
