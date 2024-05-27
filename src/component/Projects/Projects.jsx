@@ -4,38 +4,32 @@ import { motion } from "framer-motion";
 import './Projects.css';
 
 const Projects = () => {
-    return (
-        <div className="project-section">
+  const hologramAnimation = {
+    initial: { opacity: 0.5, boxShadow: '0 -1px 5px rgba(0, 252, 252, 0.15)' },
+    animate: {
+      opacity: [0.5, 1],
+      boxShadow: [
+        '0 -1px 5px rgba(0, 252, 252, 0.15)',
+        '0 -75px 90px rgba(0, 252, 252, 1)'
+      ],
+      transition: {
+        duration: 1.5,
+        yoyo: Infinity
+      }
+    }
+  };
+
+  return (
+    <div className="project-section">
       <div className="project-left">
         <h2 className="project-name">Algobourse</h2>
         <p className="project-description">Algobourse, la plateforme pour vous aider à investir</p>
       </div>
       <div className="project-right">
-        <motion.div
-          className="project-hologram"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <motion.img
-            src="/algobourse.png"
-            alt="Project Preview"
-            className="project-image"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1.5 }}
-          />
-        </motion.div>
-        <div className="project-socle"></div>
-        <motion.div
-          className="projector-light"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 1.5 }}
-        />
+      <motion.div className="holo" />
       </div>
     </div>
-    );
+  );
 }
 
 export default Projects;
