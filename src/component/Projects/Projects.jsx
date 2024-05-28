@@ -10,7 +10,7 @@ const Projects = () => {
       opacity: [0.5, 1],
       boxShadow: [
         '0 -1px 5px rgba(0, 252, 252, 0.15)',
-        '0 -75px 90px rgba(0, 252, 252, 1)'
+        '0 -75px  90px rgba(0, 252, 252, 1)'
       ],
       transition: {
         duration: 1.5,
@@ -26,7 +26,10 @@ const Projects = () => {
         <p className="project-description">Algobourse, la plateforme pour vous aider à investir</p>
       </div>
       <div className="project-right">
-      <motion.div className="holo" />
+        {/* <div className="card"> */}
+          <img src="/algobourse.png" alt="algovourse screen" className="card" />
+        {/* </div> */}
+        <motion.div className="holo" />
       </div>
     </div>
   );
