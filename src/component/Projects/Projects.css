@@ -10,9 +10,30 @@
 }
 
 .project-left {
+  display: flex;
   flex: 1;
   padding-right: 20px;
 }
+
+.project-left-techno {
+  flex: 1;
+  text-align: left;
+}
+
+.project-left-techno-title {
+  margin-bottom: 25px;
+}
+
+.project-left-techno-text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.project-left-desc {
+  flex: 2;
+}
+
 
 .project-name {
   font-size: 24px;
@@ -21,7 +42,9 @@
 }
 
 .project-description {
-  font-size: 16px;
+  font-size: 22px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .project-right {
@@ -35,16 +58,16 @@
 
 .card {
   position: relative;
-  width: 400px;
-  height: 270px;
+  width: 300px;
+  height: 350px;
   background-size: contain;
   background-repeat: no-repeat;
-  animation: float 1s infinite alternate;
+  animation: float 1.5s infinite alternate;
 }
 
 .holo {
   position: absolute;
-  bottom: 0;
+  bottom: 90px;
   width: 150px;
   height: 5px;
   background-color: rgba(0, 252, 252, 0.35);
@@ -68,7 +91,7 @@
   }
   to {
     will-change: transform;
-    transform: translateY(-120px);
+    transform: translateY(-100px);
   }
 }
 

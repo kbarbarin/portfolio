@@ -4,31 +4,24 @@ import { motion } from "framer-motion";
 import './Projects.css';
 
 const Projects = () => {
-  const hologramAnimation = {
-    initial: { opacity: 0.5, boxShadow: '0 -1px 5px rgba(0, 252, 252, 0.15)' },
-    animate: {
-      opacity: [0.5, 1],
-      boxShadow: [
-        '0 -1px 5px rgba(0, 252, 252, 0.15)',
-        '0 -75px  90px rgba(0, 252, 252, 1)'
-      ],
-      transition: {
-        duration: 1.5,
-        yoyo: Infinity
-      }
-    }
-  };
 
   return (
     <div className="project-section">
       <div className="project-left">
-        <h2 className="project-name">Algobourse</h2>
-        <p className="project-description">Algobourse, la plateforme pour vous aider à investir</p>
+        <div className="project-left-techno">
+          <h2 className="project-left-techno-title">Les technos</h2>
+          <h3 className="project-left-techno-text">React Native</h3>
+          <h3 className="project-left-techno-text">React</h3>
+          <h3 className="project-left-techno-text">scss</h3>
+          <h3 className="project-left-techno-text">Firebase</h3>
+        </div>
+        <div className="project-left-desc">
+          <h2 className="project-name">Algobourse</h2>
+          <p className="project-description">Algobourse est une application mobile de suivi de performance sur ses investissements boursiers, voici la landing page du projet qui explique toutes les fonctionnalités du projet.</p>
+        </div>
       </div>
       <div className="project-right">
-        {/* <div className="card"> */}
-          <img src="/algobourse.png" alt="algovourse screen" className="card" />
-        {/* </div> */}
+        <img src="/MainMookUp.png" alt="algobourse screen" className="card" />
         <motion.div className="holo" />
       </div>
     </div>
