@@ -28,6 +28,7 @@ const App = () => {
           <Projects />
           <Skills />
           {/* Add other components of your site here */}
+          <p className='copyright'>© Copyright 2024 - Killian Barbarin</p>
         </motion.div>
       )}
     </div>
