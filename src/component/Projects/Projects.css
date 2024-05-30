@@ -47,6 +47,21 @@
   line-height: 1.5;
 }
 
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.project-links-button {
+  background-color: rgb(38, 34, 34);
+  color: beige;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
 .project-right {
   position: relative;
   width: 500px;

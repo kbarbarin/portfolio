@@ -8,6 +8,7 @@ import IntroAnimation from './component/IntroAnimation/IntroAnimation';
 import Projects from './component/Projects/Projects';
 
 import './App.css';
+import Skills from './component/Skills/Skills';
 
 const App = () => {
   const [introComplete, setIntroComplete] = useState(false);
@@ -25,6 +26,7 @@ const App = () => {
           <HeaderBar />
           <MainPresentation />
           <Projects />
+          <Skills />
           {/* Add other components of your site here */}
         </motion.div>
       )}

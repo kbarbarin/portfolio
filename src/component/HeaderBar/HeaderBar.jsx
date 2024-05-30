@@ -15,8 +15,8 @@ const HeaderBar = () => {
             </div>
             <div className="headerBar-rightPart">
                 <motion.ol initial="hidden" animate="visible" variants={list} className="headerBar-rightPart-list">
-                    <motion.li variants={item}>Skills</motion.li>
                     <motion.li variants={item}>Projects</motion.li>
+                    <motion.li variants={item}>Skills</motion.li>
                     <motion.li variants={item}>Contact</motion.li>
                 </motion.ol>
             </div>
