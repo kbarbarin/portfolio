@@ -1,6 +1,7 @@
 .title {
     font-size: 46px;
     margin-bottom: 80px;
+    margin-top: 40px;
 }
 
 .section {
@@ -21,8 +22,8 @@
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 20px;
     margin-bottom: 20px;
 }

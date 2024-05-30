@@ -9,6 +9,7 @@ import Projects from './component/Projects/Projects';
 
 import './App.css';
 import Skills from './component/Skills/Skills';
+import Contact from './component/Contact/Contact';
 
 const App = () => {
   const [introComplete, setIntroComplete] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
           <MainPresentation />
           <Projects />
           <Skills />
+          <Contact />
           {/* Add other components of your site here */}
           <p className='copyright'>© Copyright 2024 - Killian Barbarin</p>
         </motion.div>

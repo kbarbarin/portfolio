@@ -1,26 +1,39 @@
+.project {
+  color: white;
+  background-color: #3498db;
+  padding-bottom: 60px;
+}
+
 .project-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 35%;
   padding: 20px;
-  margin-bottom: 40px;
-  color: white;
-  background-color: #3498db;
 }
 
 .project-left {
   display: flex;
   flex: 1;
-  padding-right: 20px;
 }
 
 .project-left-techno {
   flex: 1;
   text-align: left;
+  margin-left: 130px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
 }
 
 .project-left-techno-title {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.project-left-techno-section {
+  display: flex;
   margin-bottom: 25px;
 }
 
@@ -30,15 +43,27 @@
   margin-bottom: 15px;
 }
 
+.project-left-techno-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .project-left-desc {
-  flex: 2;
+  margin-left: 120px;
+  flex: 1;
 }
 
 
 .project-name {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+.project-techno {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
 }
 
 .project-description {
@@ -49,9 +74,12 @@
 
 .project-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top: 200px;
+}
+
+.project-links > a {
+  margin-left: 30px;
 }
 
 .project-links-button {
@@ -82,7 +110,7 @@
 
 .holo {
   position: absolute;
-  bottom: 90px;
+  bottom: 20px;
   width: 150px;
   height: 5px;
   background-color: rgba(0, 252, 252, 0.35);
@@ -102,16 +130,16 @@
 @keyframes float {
   from {
     will-change: unset;
-    transform: translateY(-110px);
+    transform: translateY(-60px);
   }
+
   to {
     will-change: transform;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
   }
 }
 
 @keyframes holographic {
-  
   from {
     will-change: box-shadow;
     box-shadow:
@@ -131,6 +159,7 @@
       0 -65px 80px rgba(0, 252, 252, 1),
       0 -75px 90px rgba(0, 252, 252, 1);
   }
+
   to {
     will-change: unset;
     box-shadow:
