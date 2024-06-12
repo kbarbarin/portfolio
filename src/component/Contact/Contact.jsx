@@ -1,70 +1,75 @@
-import React, {useEffect} from "react";
-import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 import './Contact.css';
+import interogation from "./InterogationMark";
 
 const Contact = () => {
-    const questionMarkVariants = {
-        hidden: {
-            scale: 1,
-            rotate: 0,
-        },
-        visible: {
-            scale: [1, 3, 2],
-            rotate: 360,
-            transition: {
-                duration: 2,
-                ease: 'easeInOut',
-                loop: Infinity,
-            },
-        },
-    };
-
     const { ref, inView } = useInView();
 
     const controls = useAnimation();
     useEffect(() => {
         if (inView) {
             controls.start("visible");
-        }
-        if (!inView) {
+        } else {
             controls.start("hidden");
         }
     }, [inView, controls]);
 
+    const lineToQuestionMark = {
+        hidden: { pathLength: 0, opacity: 0 },
+        visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                duration: 2,
+                ease: "easeInOut",
+            },
+        },
+    };
+
     return (
         <React.Fragment>
-            <h1 className="contact-title">Contact</h1>
-
             <div className="contact-container">
-                <motion.div
+                <h1 className="contact-title">Contact</h1>
+                {/* <motion.svg
+                    // width="100"
+                    // height="100"
+                    // viewBox="0 0 100 100"
                     className="question-mark"
-                    variants={questionMarkVariants}
-                    initial="hiden"
+                    initial="hidden"
                     animate={controls}
                     ref={ref}
                 >
-                    ?
-                </motion.div>
+                    <motion.path
+                        d={interogation}
+                        stroke="#0099ff"
+                        strokeWidth="2"
+                        fill="none"
+                        variants={lineToQuestionMark}
+                    />
+                </motion.svg> */}
                 <form className="contact-form">
-                    <label>
-                        Name:
+                    <div className="contact-form-name">
+                        <label>Name:</label>
                         <input type="text" name="name" />
-                    </label>
-                    <label>
-                        Email:
-                        <input type="email" name="email" />
-                    </label>
-                    <label>
-                        Message:
-                        <textarea name="message" />
-                    </label>
-                    <button type="submit">Send</button>
+                    </div>
+                    <div className="contact-form-email">
+                        <label>Email:</label>
+                        <input type="text" name="email" />
+                    </div>
+                    <div className="contact-form-subject">
+                        <label>Subject:</label>
+                        <input type="text" name="subject" />
+                    </div>
+                    <div className="contact-form-message">
+                        <label>Message:</label>
+                        <textarea type="text" name="message" />
+                    </div>
+                    <button className="contact-form-button" type="submit">Send</button>
                 </form>
             </div>
         </React.Fragment>
-
     );
 }
 

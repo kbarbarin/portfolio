@@ -19,9 +19,9 @@ const App = () => {
       {!introComplete && <IntroAnimation onComplete={() => setIntroComplete(true)} />}
       {introComplete && (
         <motion.div
-          initial={{ opacity: 0, y: "100%" }}
+          initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 3 }}
           className='body'
         >
           <HeaderBar />
@@ -29,7 +29,6 @@ const App = () => {
           <Projects />
           <Skills />
           <Contact />
-          {/* Add other components of your site here */}
           <p className='copyright'>© Copyright 2024 - Killian Barbarin</p>
         </motion.div>
       )}
