@@ -1,6 +1,7 @@
 .main {
     display: flex;
     padding-top: 100px;
+    height: 90vh;
 }
 
 .main-left {
