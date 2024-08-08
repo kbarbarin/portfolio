@@ -1,72 +1,38 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 import './Contact.css';
-import interogation from "./InterogationMark";
 
 const Contact = () => {
-    const { ref, inView } = useInView();
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [subject, setSubject] = useState();
+    const [message, setMessage] = useState();
 
-    const controls = useAnimation();
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        } else {
-            controls.start("hidden");
-        }
-    }, [inView, controls]);
-
-    const lineToQuestionMark = {
-        hidden: { pathLength: 0, opacity: 0 },
-        visible: {
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                duration: 2,
-                ease: "easeInOut",
-            },
-        },
-    };
-
+    const sendNotification = (e) => {
+        e.preventDefault();
+    }
+    
     return (
         <React.Fragment>
             <div className="contact-container">
                 <h1 className="contact-title">Contact</h1>
-                {/* <motion.svg
-                    // width="100"
-                    // height="100"
-                    // viewBox="0 0 100 100"
-                    className="question-mark"
-                    initial="hidden"
-                    animate={controls}
-                    ref={ref}
-                >
-                    <motion.path
-                        d={interogation}
-                        stroke="#0099ff"
-                        strokeWidth="2"
-                        fill="none"
-                        variants={lineToQuestionMark}
-                    />
-                </motion.svg> */}
                 <form className="contact-form">
                     <div className="contact-form-name">
                         <label>Name:</label>
-                        <input type="text" name="name" />
+                        <input onTextChange={(e) => setName(e.value)} type="text" name="name" required/>
                     </div>
                     <div className="contact-form-email">
                         <label>Email:</label>
-                        <input type="text" name="email" />
+                        <input onTextChange={(e) => setEmail(e.value)} type="text" name="email" required/>
                     </div>
                     <div className="contact-form-subject">
                         <label>Subject:</label>
-                        <input type="text" name="subject" />
+                        <input onTextChange={(e) => setSubject(e.value)} type="text" name="subject" required/>
                     </div>
                     <div className="contact-form-message">
                         <label>Message:</label>
-                        <textarea type="text" name="message" />
+                        <textarea onTextChange={(e) => setMessage(e.value)} type="text" name="message" required/>
                     </div>
-                    <button className="contact-form-button" type="submit">Send</button>
+                    <button onPress={(e) => sendNotification(e)} className="contact-form-button" type="submit">Send</button>
                 </form>
             </div>
         </React.Fragment>
