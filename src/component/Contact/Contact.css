@@ -26,7 +26,7 @@
 }
 
 .contact-form-valid {
-  border: 1px solid #34db66;
+  border: 3px solid #34db66;
   border-radius: 15px;
   background-color: #72ff9c;
   width: 40%;
@@ -35,7 +35,7 @@
 }
 
 .contact-form-invalid {
-  border: 1px solid #db3434;
+  border: 3px solid #db3434;
   border-radius: 15px;
   background-color: #ff7272;
   width: 40%;
