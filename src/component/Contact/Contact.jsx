@@ -34,6 +34,16 @@ const Contact = () => {
         <React.Fragment>
             <div className="contact-container">
                 <h1 className="contact-title">Contact</h1>
+                {isAdded === 1 && 
+                        <div className="contact-form-valid">
+                            <p>Votre message à bien été envoyé</p>
+                        </div>
+                    }
+                    {isAdded === -1 && 
+                        <div className="contact-form-invalid">
+                            <p>Une erreur est survenue !</p>
+                        </div>
+                    }
                 <form className="contact-form" onSubmit={sendNotification}>
                     <div className="contact-form-name">
                         <label>Name:</label>
