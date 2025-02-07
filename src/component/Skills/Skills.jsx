@@ -5,7 +5,7 @@ import './Skill.css';
 const Skills = () => {
     return (
         <React.Fragment>
-            <h1 className="title"> Skills</h1>
+            <h1 className="title" id="skills"> Skills</h1>
             <div className="section">
                 <div className="section-part">
                     <h2>Design</h2>

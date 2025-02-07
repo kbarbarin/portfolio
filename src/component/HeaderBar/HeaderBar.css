@@ -26,3 +26,14 @@
     width: 65%;
     font-size: x-large;
 }
+
+.headerBar-link {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: inherit; /* Utilise la couleur du texte parent */
+    display: block; /* Assure que le lien occupe tout l'espace du <li> */
+    padding: 10px; /* Ajoute un peu d'espace autour du texte */
+}
+
+.headerBar-link:hover {
+    color: #007bff; /* Change la couleur au survol */
+}

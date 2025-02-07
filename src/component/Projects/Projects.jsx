@@ -9,7 +9,7 @@ const Projects = () => {
   const githubLpLink = 'https://github.com/arasolonjatovo/algobourse-lp';
 
   return (
-    <div className="project">
+    <div className="project" id="projects">
       <div className="project-section">
         <div className="project-left">
           {/* <div className="project-left-techno">

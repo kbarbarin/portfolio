@@ -32,7 +32,7 @@ const Contact = () => {
     
     return (
         <React.Fragment>
-            <div className="contact-container">
+            <div className="contact-container" id="contact">
                 <h1 className="contact-title">Contact</h1>
                 {isAdded === 1 && 
                         <div className="contact-form-valid">

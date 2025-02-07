@@ -15,9 +15,15 @@ const HeaderBar = () => {
             </div>
             <div className="headerBar-rightPart">
                 <motion.ol initial="hidden" animate="visible" variants={list} className="headerBar-rightPart-list">
-                    <motion.li variants={item}>Projects</motion.li>
-                    <motion.li variants={item}>Skills</motion.li>
-                    <motion.li variants={item}>Contact</motion.li>
+                    <motion.li variants={item}>
+                        <a href="#projects" className="headerBar-link">Projects</a>
+                    </motion.li>
+                    <motion.li variants={item}>
+                        <a href="#skills" className="headerBar-link">Skills</a>
+                    </motion.li>
+                    <motion.li variants={item}>
+                        <a href="#contact" className="headerBar-link">Contact</a>
+                    </motion.li>
                 </motion.ol>
             </div>
         </header>
