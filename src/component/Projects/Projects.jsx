@@ -10,6 +10,8 @@ const Projects = () => {
   return (
     <>
       <Swiper
+      slidesPerView={1}
+        loop={true}
         pagination={{
           dynamicBullets: true,
         }}
