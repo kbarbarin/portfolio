@@ -1,22 +1,22 @@
-.project {
+.algobourse-project {
   color: white;
   background-color: #3498db;
   padding-bottom: 60px;
 }
 
-.project-section {
+.algobourse-project-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
-.project-left {
+.algobourse-project-left {
   display: flex;
   flex: 1;
 }
 
-.project-left-techno {
+.algobourse-project-left-techno {
   flex: 1;
   text-align: left;
   margin-left: 130px;
@@ -27,62 +27,62 @@
   align-items: left;
 }
 
-.project-left-techno-title {
+.algobourse-project-left-techno-title {
   margin-bottom: 25px;
   text-align: center;
 }
 
-.project-left-techno-section {
+.algobourse-project-left-techno-section {
   display: flex;
   margin-bottom: 25px;
 }
 
-.project-left-techno-text {
+.algobourse-project-left-techno-text {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
-.project-left-techno-icon {
+.algobourse-project-left-techno-icon {
   width: 40px;
   height: 40px;
 }
 
-.project-left-desc {
+.algobourse-project-left-desc {
   margin-left: 120px;
   flex: 1;
 }
 
 
-.project-name {
+.algobourse-project-name {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 50px;
 }
 
-.project-techno {
+.algobourse-project-techno {
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
 }
 
-.project-description {
+.algobourse-project-description {
   font-size: 22px;
   text-align: justify;
   line-height: 1.5;
 }
 
-.project-links {
+.algobourse-project-links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.project-links > a {
+.algobourse-project-links > a {
   margin-left: 30px;
 }
 
-.project-links-button {
+.algobourse-project-links-button {
   background-color: rgb(38, 34, 34);
   color: beige;
   padding: 5px 10px;
@@ -90,7 +90,7 @@
   text-decoration: none;
 }
 
-.project-right {
+.algobourse-project-right {
   position: relative;
   width: 500px;
   height: 450px;
@@ -99,7 +99,7 @@
   align-items: flex-end;
 }
 
-.card {
+.algobourse-card {
   position: relative;
   width: 300px;
   height: 350px;
@@ -108,7 +108,7 @@
   animation: float 1.5s infinite alternate;
 }
 
-.holo {
+.algobourse-holo {
   position: absolute;
   bottom: 20px;
   width: 150px;
@@ -121,7 +121,7 @@
   animation: holographic 1.5s infinite alternate;
 }
 
-.project-image {
+.algobourse-project-image {
   width: 100%;
   height: auto;
   z-index: 3;

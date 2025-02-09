@@ -24,8 +24,8 @@ const Algobourse = () => {
             </div>
           </div>
           <div className="algobourse-project-right">
-            <img src="/MainMookUp.png" alt="algobourse screen" className="card" />
-            <motion.div className="holo" />
+            <img src="/MainMookUp.png" alt="algobourse screen" className="algobourse-card" />
+            <motion.div className="algobourse-holo" />
           </div>
         </div>
         <div className="algobourse-project-links">
