@@ -20,6 +20,10 @@ const MainPresentation = () => {
                 <h1 className="main-left-name">Killian Barbarin</h1>
                 <h2 className="main-left-job">Front-End Developer.</h2>
                 <h2 className="main-left-desc">Eat. Code. Sleep. And make it loop.</h2>
+                <button className="main-button">
+                    <img className="main-button-icon" src="/icons/git.svg" />
+                    Github
+                </button>
             </div>
             <motion.div className="main-right">
                 <motion.svg
