@@ -26,7 +26,7 @@ const MainPresentation = () => {
                         Github
                     </button>
                     <button onClick={() => window.open('https://www.linkedin.com/in/killian-barbarin-7a551617a/', '_blank')} className="main-button">
-                        <img className="main-button-icon" src="/icons/Linkedin.webp" />
+                        <img className="main-button-icon" src="/icons/LinkedIn.webp" />
                         Linkedin
                     </button>
                 </div>
