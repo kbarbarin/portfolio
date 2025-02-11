@@ -1,0 +1,140 @@
+.noslois-project {
+    color: white;
+    background-color: #3498db;
+    padding-bottom: 60px;
+}
+
+.noslois-project-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.noslois-project-left {
+    display: flex;
+    flex: 1;
+}
+
+.noslois-project-left-techno {
+    flex: 1;
+    text-align: left;
+    margin-left: 130px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.noslois-project-left-techno-title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.noslois-project-left-techno-section {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.noslois-project-left-techno-text {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.noslois-project-left-techno-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.noslois-project-left-desc {
+    margin-left: 120px;
+    flex: 1;
+}
+
+
+.noslois-project-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.noslois-project-techno {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.noslois-project-description {
+    font-size: 22px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.noslois-project-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noslois-project-links>a {
+    margin-left: 30px;
+}
+
+.noslois-project-links-button {
+    background-color: rgb(38, 34, 34);
+    color: beige;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.noslois-project-right {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.noslois-card {
+    position: relative;
+    width: 360px;
+    height: 450px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotate3D 6s infinite ease-in-out;
+}
+
+.noslois-card:hover {
+    animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes rotate3D {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: rotateX(7deg) rotateY(-7deg);
+    }
+    50% {
+      transform: rotateX(0deg) rotateY(7deg);
+    }
+    75% {
+      transform: rotateX(-7deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }

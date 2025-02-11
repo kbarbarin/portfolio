@@ -1,10 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectCreative } from 'swiper/modules';
-import Algobourse from "./ProjectsDetails/Algobourse";
+import Algobourse from "./ProjectsDetails/Algobourse/Algobourse";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import NosLois from "./ProjectsDetails/NosLois/NosLois";
 
 const Projects = () => {
   return (
@@ -38,9 +39,7 @@ const Projects = () => {
         className="mySwiper"
       >
         <SwiperSlide><Algobourse /></SwiperSlide>
-        <SwiperSlide><Algobourse /></SwiperSlide>
-        <SwiperSlide><Algobourse /></SwiperSlide>
-        <SwiperSlide><Algobourse /></SwiperSlide>
+        <SwiperSlide><NosLois /></SwiperSlide>
       </Swiper>
     </>
   );
