@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import './MainPresentation.css';
 
 const MainPresentation = () => {
-    const divSVG = {hidden: { opacity: 0 }, visible: { opacity: 1, transition: {when: "beforeChildren", staggerChildren: 0.2}}}
+    const divSVG = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { when: "beforeChildren", staggerChildren: 0.2 } } }
     const imageGreen = { hidden: { opacity: 0, height: "0%", width: "0%", x: 10 }, visible: { opacity: 1, height: "100%", width: "100%", x: 0 } };
     const imageRed = { hidden: { opacity: 0, width: "50%", y: 10 }, visible: { opacity: 1, width: "100%", y: 0 } };
     const imagePurple = { hidden: { opacity: 0, width: "50%", y: -10 }, visible: { opacity: 1, width: "100%", y: 0 } };
@@ -20,10 +20,16 @@ const MainPresentation = () => {
                 <h1 className="main-left-name">Killian Barbarin</h1>
                 <h2 className="main-left-job">Front-End Developer.</h2>
                 <h2 className="main-left-desc">Eat. Code. Sleep. And make it loop.</h2>
-                <button className="main-button">
-                    <img className="main-button-icon" src="/icons/git.svg" />
-                    Github
-                </button>
+                <div className="main-links">
+                    <button onClick={() => window.open('https://github.com/kbarbarin', '_blank')} className="main-button">
+                        <img className="main-button-icon" src="/icons/git.svg" />
+                        Github
+                    </button>
+                    <button onClick={() => window.open('https://www.linkedin.com/in/killian-barbarin-7a551617a/', '_blank')} className="main-button">
+                        <img className="main-button-icon" src="/icons/Linkedin.webp" />
+                        Linkedin
+                    </button>
+                </div>
             </div>
             <motion.div className="main-right">
                 <motion.svg
