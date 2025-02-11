@@ -1,11 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectCreative } from 'swiper/modules';
+
 import Algobourse from "./ProjectsDetails/Algobourse/Algobourse";
+import NosLois from "./ProjectsDetails/NosLois/NosLois";
+import HoHo from "./ProjectsDetails/HoHo/HoHo";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import NosLois from "./ProjectsDetails/NosLois/NosLois";
 
 const Projects = () => {
   return (
@@ -15,7 +17,7 @@ const Projects = () => {
         loop={true}
         autoplay={{
           delay: 6000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }}
         grabCursor={true}
         effect={'creative'}
@@ -40,6 +42,7 @@ const Projects = () => {
       >
         <SwiperSlide><Algobourse /></SwiperSlide>
         <SwiperSlide><NosLois /></SwiperSlide>
+        <SwiperSlide><HoHo /></SwiperSlide>
       </Swiper>
     </>
   );
