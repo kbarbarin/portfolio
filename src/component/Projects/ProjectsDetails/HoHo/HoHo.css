@@ -101,21 +101,18 @@
   
   .hoho-card {
     position: relative;
-    width: 450px;
-    height: 350px;
+    width: 549px;
+    height: 450px;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: float 1.5s infinite alternate;
+    animation: pulse 5s infinite alternate;
   }
   
-  @keyframes float {
-    from {
-      will-change: unset;
-      transform: translateY(-60px);
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
     }
-  
-    to {
-      will-change: transform;
-      transform: translateY(-50px);
+    50% {
+      transform: scale(1.03);
     }
   }
