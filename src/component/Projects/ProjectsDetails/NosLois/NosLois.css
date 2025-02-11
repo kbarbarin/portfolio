@@ -48,6 +48,12 @@
     height: 40px;
 }
 
+.elastic {
+    margin-top: -20px;
+    width: 80px;
+    height: 80px;
+}
+
 .noslois-project-left-desc {
     margin-left: 120px;
     flex: 1;

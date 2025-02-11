@@ -18,7 +18,7 @@ const NosLois = () => {
               <div className="noslois-project-techno">
                 <img className="noslois-project-left-techno-icon" src="/icons/react-native.svg" alt="react native" />
                 <img className="noslois-project-left-techno-icon" src="/icons/google-cloud.svg" alt="google cloud plateform" />
-                <img className="noslois-project-left-techno-icon" src="/icons/elastic.svg" alt="elasticsearch" />
+                <img className="noslois-project-left-techno-icon elastic" src="/icons/elastic.svg" alt="elasticsearch" />
                 <img className="noslois-project-left-techno-icon" src="/icons/firebase.svg" alt="firebase" />
               </div>
             </div>
