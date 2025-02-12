@@ -22,11 +22,11 @@ const MainPresentation = () => {
                 <h2 className="main-left-desc">Eat. Code. Sleep. And make it loop.</h2>
                 <div className="main-links">
                     <button onClick={() => window.open('https://github.com/kbarbarin', '_blank')} className="main-button">
-                        <img className="main-button-icon" src="/icons/git.svg" />
+                        <img className="main-button-icon" src="/icons/git.svg" alt="GitHub" />
                         Github
                     </button>
                     <button onClick={() => window.open('https://www.linkedin.com/in/killian-barbarin-7a551617a/', '_blank')} className="main-button">
-                        <img className="main-button-icon" src="/icons/LinkedIn.webp" />
+                        <img className="main-button-icon" src="/icons/LinkedIn.webp" alt="LinkedIn" />
                         Linkedin
                     </button>
                 </div>
@@ -36,7 +36,6 @@ const MainPresentation = () => {
                     initial="hidden"
                     animate="visible"
                     width="500"
-                    height="500"
                     variants={divSVG}
                     viewBox="0 0 24 24"
                     fill="none"

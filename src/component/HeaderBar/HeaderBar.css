@@ -62,7 +62,6 @@
     }
 
     .headerBar-rightPart-list {
-        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
         font-size: large; /* Réduit la taille de la police */
     }
 

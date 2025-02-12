@@ -2,12 +2,14 @@
     display: flex;
     padding-top: 100px;
     height: 90vh;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
 }
 
 .main-left {
     flex: 1;
     text-align: left;
     padding-left: 50px;
+    min-width: 300px; /* Assure une largeur minimale pour éviter le sur-compression */
 }
 
 .main-left-hello {
@@ -30,10 +32,13 @@
     font-size: 32px;
     font-weight: 400;
     color: #0c293c;
-  
 }
+
 .main-right {
     flex: 1;
+    display: flex;
+    justify-content: center; /* Centre le SVG */
+    align-items: center; /* Centre le SVG verticalement */
 }
 
 .main-right-logo {
@@ -43,6 +48,7 @@
 
 .main-links {
     display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne sur les petits écrans */
 }
 
 .main-button {
@@ -57,14 +63,68 @@
     padding: 5px 10px;
     border-radius: 15px;
     text-decoration: none;
+    border: none; /* Supprime la bordure par défaut des boutons */
+    cursor: pointer;
 }
 
 .main-button:hover {
-    cursor: pointer;
+    background-color: #555; /* Change la couleur au survol */
 }
 
 .main-button-icon {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+        align-items: center;
+        height: auto; /* Ajuste la hauteur automatiquement */
+    }
+
+    .main-left {
+        padding-left: 20px; /* Réduit le padding à gauche */
+        text-align: center; /* Centre le texte sur les petits écrans */
+    }
+
+    .main-left-name {
+        font-size: 80px; /* Réduit la taille de la police pour le nom */
+    }
+
+    .main-left-job, .main-left-desc {
+        font-size: 24px; /* Réduit la taille de la police pour le job et la description */
+    }
+
+    .main-right {
+        margin-left: 40px;
+        max-width: 50%;
+        max-height: 50%;
+    }
+    
+    .main-links {
+        justify-content: center; /* Centre les boutons sur les petits écrans */
+    }
+
+    .main-button {
+        margin-right: 10px; /* Réduit la marge entre les boutons */
+        margin-bottom: 10px; /* Ajoute une marge en bas pour les boutons */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-left-name {
+        font-size: 60px; /* Réduit encore la taille de la police pour les très petits écrans */
+    }
+
+    .main-left-job, .main-left-desc {
+        font-size: 20px; /* Réduit la taille de la police pour les très petits écrans */
+    }
+
+    .main-button {
+        font-size: 12px; /* Réduit la taille de la police des boutons */
+        padding: 5px 8px; /* Réduit le padding des boutons */
+    }
 }
