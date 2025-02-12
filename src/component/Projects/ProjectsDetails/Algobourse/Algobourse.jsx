@@ -29,9 +29,9 @@ const Algobourse = () => {
           </div>
         </div>
         <div className="algobourse-project-links">
-          <a target="_blank" href={githubLink} className="algobourse-project-links-button">Voir le github</a>
+          {/* <a target="_blank" href={githubLink} className="algobourse-project-links-button">Voir le github</a>
           <a target="_blank" href={lpLink} className="algobourse-project-links-button">Voir la landing page</a>
-          <a target="_blank" href={githubLpLink} className="algobourse-project-links-button">Voir le github de la landing page</a>
+          <a target="_blank" href={githubLpLink} className="algobourse-project-links-button">Voir le github de la landing page</a> */}
         </div>
       </div>
     );

@@ -1,39 +1,72 @@
 .headerBar {
     display: flex;
     padding: 25px;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
 }
 
 .headerBar-leftPart {
     flex: 1;
+    display: flex;
+    justify-content: center; /* Centre le logo sur les petits écrans */
 }
 
 .headerBar-leftPart-logo {
-    padding-left: 25px;
     max-height: 100%;
     max-width: 100%;
+    padding-left: 0; /* Supprime le padding à gauche sur les petits écrans */
 }
 
 .headerBar-rightPart {
     flex: 2;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centre la liste sur les petits écrans */
 }
 
 .headerBar-rightPart-list {
     display: flex;
     justify-content: space-around;
-    margin-left: 35%;
-    width: 65%;
+    margin-left: 0; /* Supprime la marge à gauche sur les petits écrans */
+    width: 100%; /* Prend toute la largeur disponible */
     font-size: x-large;
+    padding: 0; /* Supprime le padding par défaut */
+    list-style: none; /* Supprime les puces de la liste */
 }
 
 .headerBar-link {
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    color: inherit; /* Utilise la couleur du texte parent */
-    display: block; /* Assure que le lien occupe tout l'espace du <li> */
-    padding: 10px; /* Ajoute un peu d'espace autour du texte */
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+    text-align: center; /* Centre le texte dans les liens */
 }
 
 .headerBar-link:hover {
-    color: #007bff; /* Change la couleur au survol */
+    color: #007bff;
+}
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .headerBar {
+        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .headerBar-leftPart-logo {
+        max-width: 80%; /* Réduit la taille du logo sur les petits écrans */
+    }
+
+    .headerBar-rightPart {
+        width: 100%; /* Prend toute la largeur disponible */
+        margin-top: 20px; /* Ajoute un espace entre le logo et la liste */
+    }
+
+    .headerBar-rightPart-list {
+        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+        font-size: large; /* Réduit la taille de la police */
+    }
+
+    .headerBar-link {
+        padding: 5px; /* Réduit le padding pour les petits écrans */
+    }
 }
