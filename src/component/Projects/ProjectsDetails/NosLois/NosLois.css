@@ -9,11 +9,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
 }
 
 .noslois-project-left {
     display: flex;
     flex: 1;
+    min-width: 300px; /* Assure une largeur minimale pour éviter le sur-compression */
 }
 
 .noslois-project-left-techno {
@@ -58,7 +60,6 @@
     margin-left: 120px;
     flex: 1;
 }
-
 
 .noslois-project-name {
     font-size: 32px;
@@ -144,3 +145,76 @@
       transform: scale(1.05);
     }
   }
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .noslois-project-section {
+        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .noslois-project-left {
+        margin-left: 0; /* Supprime la marge à gauche */
+        padding: 0 20px; /* Ajoute un padding horizontal */
+    }
+
+    .noslois-project-left-desc {
+        margin-left: 0; /* Supprime la marge à gauche */
+        text-align: center; /* Centre le texte */
+    }
+
+    .noslois-project-name {
+        font-size: 28px; /* Réduit la taille de la police pour le nom */
+        margin-bottom: 30px; /* Réduit la marge en bas */
+    }
+
+    .noslois-project-description {
+        font-size: 18px; /* Réduit la taille de la police pour la description */
+    }
+
+    .noslois-project-techno {
+        justify-content: center; /* Centre les icônes des technologies */
+    }
+
+    .noslois-project-right {
+        width: 100%; /* Prend toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        margin-top: 20px; /* Ajoute un espace entre les sections */
+    }
+
+    .noslois-card {
+        width: 100%; /* Ajuste la largeur de la carte */
+        height: auto; /* Ajuste la hauteur de la carte */
+    }
+}
+
+@media (max-width: 480px) {
+    .noslois-project-name {
+        font-size: 24px; /* Réduit encore la taille de la police pour les très petits écrans */
+    }
+
+    .noslois-project-description {
+        font-size: 16px; /* Réduit la taille de la police pour les très petits écrans */
+    }
+
+    .noslois-project-techno {
+        flex-wrap: wrap; /* Permet aux icônes de passer à la ligne */
+        gap: 50px;
+        margin-bottom: 20px;    
+    }
+
+    .noslois-project-left-techno-icon {
+        width: 30px; /* Réduit la taille des icônes */
+        height: 30px; /* Réduit la taille des icônes */
+    }
+
+    .elastic {
+        width: 60px; /* Réduit la taille de l'icône Elastic */
+        height: 60px; /* Réduit la taille de l'icône Elastic */
+    }
+
+    .noslois-card {
+        width: 100%; /* Ajuste la largeur de la carte */
+        height: auto; /* Ajuste la hauteur de la carte */
+    }
+}

@@ -1,118 +1,187 @@
 .hoho-project {
-    color: white;
-    background-color: #3498db;
-    padding-bottom: 60px;
+  color: white;
+  background-color: #3498db;
+  padding-bottom: 60px;
+}
+
+.hoho-project-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+}
+
+.hoho-project-left {
+  display: flex;
+  flex: 1;
+  min-width: 300px; /* Assure une largeur minimale pour éviter le sur-compression */
+}
+
+.hoho-project-left-techno {
+  flex: 1;
+  text-align: left;
+  margin-left: 130px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.hoho-project-left-techno-title {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.hoho-project-left-techno-section {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.hoho-project-left-techno-text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.hoho-project-left-techno-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.hoho-project-left-desc {
+  margin-left: 120px;
+  flex: 1;
+}
+
+.hoho-project-name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.hoho-project-techno {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.hoho-project-description {
+  font-size: 22px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.hoho-project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoho-project-links > a {
+  margin-left: 30px;
+}
+
+.hoho-project-links-button {
+  background-color: rgb(38, 34, 34);
+  color: beige;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.hoho-project-right {
+  position: relative;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hoho-card {
+  position: relative;
+  width: 549px;
+  height: 450px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 768px) {
   .hoho-project-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+      flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+      align-items: center; /* Centre les éléments */
   }
-  
+
   .hoho-project-left {
-    display: flex;
-    flex: 1;
+      margin-left: 0; /* Supprime la marge à gauche */
+      padding: 0 20px; /* Ajoute un padding horizontal */
   }
-  
-  .hoho-project-left-techno {
-    flex: 1;
-    text-align: left;
-    margin-left: 130px;
-    margin-bottom: 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-  }
-  
-  .hoho-project-left-techno-title {
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  
-  .hoho-project-left-techno-section {
-    display: flex;
-    margin-bottom: 25px;
-  }
-  
-  .hoho-project-left-techno-text {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 15px;
-  }
-  
-  .hoho-project-left-techno-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
+
   .hoho-project-left-desc {
-    margin-left: 120px;
-    flex: 1;
+      margin-left: 0; /* Supprime la marge à gauche */
+      text-align: center; /* Centre le texte */
   }
-  
-  
+
   .hoho-project-name {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 50px;
+      font-size: 28px; /* Réduit la taille de la police pour le nom */
+      margin-bottom: 30px; /* Réduit la marge en bas */
   }
-  
-  .hoho-project-techno {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
-  }
-  
+
   .hoho-project-description {
-    font-size: 22px;
-    text-align: justify;
-    line-height: 1.5;
+      font-size: 18px; /* Réduit la taille de la police pour la description */
   }
-  
-  .hoho-project-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .hoho-project-techno {
+      justify-content: center; /* Centre les icônes des technologies */
   }
-  
-  .hoho-project-links > a {
-    margin-left: 30px;
-  }
-  
-  .hoho-project-links-button {
-    background-color: rgb(38, 34, 34);
-    color: beige;
-    padding: 5px 10px;
-    border-radius: 15px;
-    text-decoration: none;
-  }
-  
+
   .hoho-project-right {
-    position: relative;
-    width: 500px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+      width: 100%; /* Prend toute la largeur disponible */
+      height: auto; /* Ajuste la hauteur automatiquement */
+      margin-top: 20px; /* Ajoute un espace entre les sections */
   }
-  
+
   .hoho-card {
-    position: relative;
-    width: 549px;
-    height: 450px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: pulse 5s infinite alternate;
+      width: 100%; /* Ajuste la largeur de la carte */
+      height: auto; /* Ajuste la hauteur de la carte */
   }
-  
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.03);
-    }
+}
+
+@media (max-width: 480px) {
+  .hoho-project-name {
+      font-size: 24px; /* Réduit encore la taille de la police pour les très petits écrans */
   }
+
+  .hoho-project-description {
+      font-size: 16px; /* Réduit la taille de la police pour les très petits écrans */
+  }
+
+  .hoho-project-techno {
+      flex-wrap: wrap; /* Permet aux icônes de passer à la ligne */
+      gap: 50px;
+      margin-bottom: 20px;  
+  }
+
+  .hoho-project-left-techno-icon {
+      width: 30px; /* Réduit la taille des icônes */
+      height: 30px; /* Réduit la taille des icônes */
+  }
+
+  .hoho-card {
+      width: 100%; /* Ajuste la largeur de la carte */
+      height: auto; /* Ajuste la hauteur de la carte */
+  }
+}
