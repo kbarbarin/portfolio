@@ -9,11 +9,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
 }
 
 .algobourse-project-left {
   display: flex;
   flex: 1;
+  min-width: 300px; /* Assure une largeur minimale pour éviter le sur-compression */
 }
 
 .algobourse-project-left-techno {
@@ -52,7 +54,6 @@
   margin-left: 120px;
   flex: 1;
 }
-
 
 .algobourse-project-name {
   font-size: 32px;
@@ -178,5 +179,81 @@
       0 -45px 35px rgba(0, 252, 252, 0.95),
       0 -65px 40px rgba(0, 252, 252, 1),
       0 -75px 50px rgba(0, 252, 252, 1);
+  }
+}
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 768px) {
+  .algobourse-project-section {
+    flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+    align-items: center; /* Centre les éléments */
+  }
+
+  .algobourse-project-left {
+    margin-left: 0; /* Supprime la marge à gauche */
+    padding: 0 20px; /* Ajoute un padding horizontal */
+  }
+
+  .algobourse-project-left-desc {
+    margin-left: 0; /* Supprime la marge à gauche */
+    text-align: center; /* Centre le texte */
+  }
+
+  .algobourse-project-name {
+    font-size: 28px; /* Réduit la taille de la police pour le nom */
+    margin-bottom: 30px; /* Réduit la marge en bas */
+  }
+
+  .algobourse-project-description {
+    font-size: 18px; /* Réduit la taille de la police pour la description */
+  }
+
+  .algobourse-project-techno {
+    justify-content: center; /* Centre les icônes des technologies */
+  }
+
+  .algobourse-project-right {
+    width: 100%; /* Prend toute la largeur disponible */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    margin-top: 20px; /* Ajoute un espace entre les sections */
+  }
+
+  .algobourse-card {
+    width: 250px; /* Réduit la taille de la carte */
+    height: 300px; /* Réduit la hauteur de la carte */
+  }
+
+  .algobourse-holo {
+    width: 120px; /* Réduit la largeur de l'effet holographique */
+  }
+}
+
+@media (max-width: 480px) {
+  .algobourse-project-name {
+    font-size: 24px; /* Réduit encore la taille de la police pour les très petits écrans */
+  }
+
+  .algobourse-project-description {
+    font-size: 16px; /* Réduit la taille de la police pour les très petits écrans */
+  }
+
+  .algobourse-project-techno {
+    flex-wrap: wrap; /* Permet aux icônes de passer à la ligne */
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+
+  .algobourse-project-left-techno-icon {
+    width: 30px; /* Réduit la taille des icônes */
+    height: 30px; /* Réduit la taille des icônes */
+  }
+
+  .algobourse-card {
+    width: 200px; /* Réduit encore la taille de la carte */
+    height: 250px; /* Réduit encore la hauteur de la carte */
+  }
+
+  .algobourse-holo {
+    width: 100px; /* Réduit encore la largeur de l'effet holographique */
   }
 }
