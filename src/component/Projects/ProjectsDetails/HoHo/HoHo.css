@@ -119,7 +119,7 @@
 }
 
 /* Media Queries pour les écrans de petite taille */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hoho-project-section {
       flex-direction: column; /* Change la direction en colonne pour les petits écrans */
       align-items: center; /* Centre les éléments */
@@ -146,6 +146,8 @@
 
   .hoho-project-techno {
       justify-content: center; /* Centre les icônes des technologies */
+      gap: 90px;
+      margin-bottom: 20px;  
   }
 
   .hoho-project-right {
@@ -174,6 +176,12 @@
       gap: 50px;
       margin-bottom: 20px;  
   }
+
+  .hoho-project-right {
+    width: 75%; /* Prend toute la largeur disponible */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    margin-top: 20px; /* Ajoute un espace entre les sections */
+}
 
   .hoho-project-left-techno-icon {
       width: 30px; /* Réduit la taille des icônes */
