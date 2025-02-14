@@ -2,23 +2,32 @@
     font-size: 46px;
     margin-bottom: 80px;
     margin-top: 40px;
+    text-align: center; /* Centre le titre */
 }
 
 .section {
     display: flex;
     justify-content: space-around;
     padding-bottom: 100px;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+}
+
+.section-part {
+    text-align: center; /* Centre le contenu des sections */
+    margin-bottom: 40px; /* Ajoute un espace entre les sections */
+    flex: 1 1 200px; /* Permet aux sections de s'adapter à la largeur disponible */
 }
 
 .section-part > h2 {
     font-size: 28px;
     font-weight: 900;
-    text-align: left;
     margin-bottom: 30px;
 }
 
 .section-part > div {
     display: flex;
+    flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+    align-items: center; /* Centre les éléments */
 }
 
 .icon {
@@ -26,4 +35,52 @@
     height: 30px;
     margin-right: 20px;
     margin-bottom: 20px;
+}
+
+/* Media Queries pour les écrans de petite taille */
+@media (max-width: 900px) {
+    .title {
+        font-size: 36px; /* Réduit la taille de la police pour le titre */
+        margin-bottom: 40px; /* Réduit la marge en bas */
+    }
+
+    .section-part {
+        margin-bottom: 20px; /* Réduit la marge en bas */
+    }
+
+    .section-part > h2 {
+        font-size: 24px; /* Réduit la taille de la police pour les sous-titres */
+    }
+
+    .icon {
+        width: 25px; /* Réduit la taille des icônes */
+        height: 25px; /* Réduit la taille des icônes */
+        margin-right: 10px; /* Réduit la marge à droite */
+        margin-top: 10px;
+    }
+
+    .icon-react-native {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px; /* Réduit encore la taille de la police pour les très petits écrans */
+    }
+
+    .section-part {
+        margin-top: 70px;
+    }
+
+    .section-part > h2 {
+        font-size: 20px; /* Réduit encore la taille de la police pour les sous-titres */
+    }
+
+    .icon {
+        width: 20px; /* Réduit encore la taille des icônes */
+        height: 20px; /* Réduit encore la taille des icônes */
+    }
 }

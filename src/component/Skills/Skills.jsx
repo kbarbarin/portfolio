@@ -1,23 +1,22 @@
 import React from "react";
-
 import './Skill.css';
 
 const Skills = () => {
     return (
         <React.Fragment>
-            <h1 className="title" id="skills"> Skills</h1>
+            <h1 className="title" id="skills">Skills</h1>
             <div className="section">
                 <div className="section-part">
                     <h2>Design</h2>
                     <div>
                         <img className="icon" src='/icons/figma.svg' alt='figma icon' />
-                        <h3>figma</h3>
+                        <h3>Figma</h3>
                     </div>
                 </div>
                 <div className="section-part">
                     <h2>Frontend</h2>
                     <div>
-                        <img className="icon" src='/icons/react-native.svg' alt='react-native icon' />
+                        <img className="icon-react-native" src='/icons/react-native.svg' alt='react-native icon' />
                         <h3>React Native</h3>
                     </div>
                     <div>
@@ -26,7 +25,7 @@ const Skills = () => {
                     </div>
                     <div>
                         <img className="icon" src='/icons/sass.svg' alt='sass icon' />
-                        <h3>Sass</h3>
+                        <h3 className="sass">Sass</h3>
                     </div>
                 </div>
                 <div className="section-part">
@@ -41,7 +40,7 @@ const Skills = () => {
                     </div>
                     <div>
                         <img className="icon" src='/icons/google-cloud.svg' alt='google-cloud icon' />
-                        <h3>Google Cloud Plateform</h3>
+                        <h3>Google Cloud Platform</h3>
                     </div>
                 </div>
                 <div className="section-part">
@@ -52,7 +51,7 @@ const Skills = () => {
                     </div>
                     <div>
                         <img className="icon" src='/icons/bash.svg' alt='bash icon' />
-                        <h3>Linux / MacOs</h3>
+                        <h3>Linux / MacOS</h3>
                     </div>
                     <div>
                         <img className="icon" src='/icons/trello.svg' alt='trello icon' />
@@ -63,7 +62,6 @@ const Skills = () => {
                         <h3>Langage C</h3>
                     </div>
                 </div>
-
             </div>
         </React.Fragment>
     );
