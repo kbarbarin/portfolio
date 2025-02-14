@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 
 const Projects = () => {
   return (
-    <>
+    <div style={{backgroundColor: "#3498db"}}>
       <Swiper
       slidesPerView={1}
         loop={true}
@@ -44,7 +44,7 @@ const Projects = () => {
         <SwiperSlide><NosLois /></SwiperSlide>
         <SwiperSlide><HoHo /></SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
 
