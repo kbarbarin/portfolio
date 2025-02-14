@@ -37,6 +37,13 @@
     margin-bottom: 20px;
 }
 
+.icon-react-native {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
 /* Media Queries pour les écrans de petite taille */
 @media (max-width: 900px) {
     .title {
@@ -58,12 +65,6 @@
         margin-right: 10px; /* Réduit la marge à droite */
         margin-top: 10px;
     }
-
-    .icon-react-native {
-        width: 25px;
-        height: 25px;
-        margin-right: 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -83,4 +84,12 @@
         width: 20px; /* Réduit encore la taille des icônes */
         height: 20px; /* Réduit encore la taille des icônes */
     }
+
+    .icon-react-native {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
 }

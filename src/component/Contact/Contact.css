@@ -22,7 +22,8 @@
   width: 40%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr) 3fr 1fr;  grid-column-gap: 35px;
+  grid-template-rows: repeat(2, 1fr) 3fr 1fr;
+  grid-column-gap: 35px;
 }
 
 .contact-form-valid {
@@ -108,3 +109,9 @@
   outline: none;
 }
 
+
+@media (max-width: 900px) {
+  .contact-form {
+    width: 80%;
+  }
+}
